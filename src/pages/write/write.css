@@ -1,0 +1,27 @@
+.write {
+  padding: 0 5em;
+  display: flex;
+  justify-content: space-between;
+  gap: 2em;
+}
+.content .editorContainer {
+  height: 75vh;
+  overflow: scroll;
+  border: 1px solid rgb(205, 201, 201);
+}
+
+.content {
+  flex: 4;
+}
+.menu {
+  flex: 1;
+}
+.editor {
+  height: 100%;
+}
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}

@@ -1,0 +1,13 @@
+.error-msg {
+  color: rgb(203, 16, 16);
+}
+.form {
+  display: grid;
+  grid-template-columns: 30%;
+  place-content: center;
+}
+
+.form button {
+  width: 50%;
+  align-self: center;
+}
