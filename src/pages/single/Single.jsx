@@ -19,7 +19,7 @@ const Single = () => {
     async function fetchData() {
       try {
         const res = await axios.get(
-          `http://localhost:5001/api/posts/${postId}`,
+          `https://gopalblogsapi.herokuapp.com/api/posts/${postId}`,
           {
             withCredentials: true,
           }
@@ -42,7 +42,7 @@ const Single = () => {
   async function handleDelete() {
     try {
       const res = await axios.delete(
-        `http://localhost:5001/api/posts/${postId}`,
+        `https://gopalblogsapi.herokuapp.com/api/posts/${postId}`,
         { withCredentials: true }
       );
       navigate("/");

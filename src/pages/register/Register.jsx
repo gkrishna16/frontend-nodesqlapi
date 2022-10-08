@@ -24,7 +24,7 @@ const Register = () => {
 
     try {
       const res = await axios.post(
-        `http://localhost:5001/api/auth/register`,
+        `https://gopalblogsapi.herokuapp.com/api/auth/register`,
         inputs
       );
       navigate("/login");

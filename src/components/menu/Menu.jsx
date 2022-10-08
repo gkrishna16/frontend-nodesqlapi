@@ -9,7 +9,7 @@ const Menu = ({ cat }) => {
     async function fetchData() {
       try {
         const res = await axios.get(
-          `http://localhost:5001/api/posts/?cat=${cat}`
+          `https://gopalblogsapi.herokuapp.com/api/posts/?cat=${cat}`
         );
         setPosts(res.data);
       } catch (error) {

@@ -40,7 +40,7 @@ const Home = () => {
   useEffect(() => {
     async function fetchData() {
       try {
-        const res = await axios.get(`http://localhost:5001/api/posts${cat}`);
+        const res = await axios.get(`https://gopalblogsapi.herokuapp.com/api/posts${cat}`);
         console.log(`cat cat`, res.data);
         setPosts(res.data);
       } catch (error) {

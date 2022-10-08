@@ -25,7 +25,7 @@ const Write = () => {
     try {
       state
         ? await axios.put(
-            `http://localhost:5001/api/posts/${state[0].id}`,
+            `https://gopalblogsapi.herokuapp.com/api/posts/${state[0].id}`,
             {
               title,
               desc: value,
@@ -35,7 +35,7 @@ const Write = () => {
             { withCredentials: true }
           )
         : await axios.post(
-            `http://localhost:5001/api/posts`,
+            `https://gopalblogsapi.herokuapp.com/api/posts`,
             {
               title,
               desc: value,
