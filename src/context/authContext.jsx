@@ -11,7 +11,11 @@ export const AuthContextProvider = ({ children }) => {
     const res = await axios.post(
       `https://gopalblogsapi.herokuapp.com/api/auth/login`,
       inputs,
-      { headers: { "Access-Control-Allow-Origin": "*" }, withCredentials: true }
+      {
+        headers: { "Access-Control-Allow-Origin": "*" },
+        "Content-Type": "application/json",
+        withCredentials: true,
+      }
     );
     console.log(res.data);
     setCurrentUser(res.data);
