@@ -73,7 +73,7 @@ const Single = () => {
                     <div className="date-time">
                       Posted {moment(post.date).fromNow()}
                     </div>
-                    {currentUser.username === post.username}
+                    {/* {currentUser.username === post.username} */}
                   </div>
                 </div>
                 <div className="rightside-info">
