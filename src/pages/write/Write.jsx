@@ -10,7 +10,7 @@ const Write = () => {
   const state = useLocation().state;
 
   console.log(useLocation());
-  // console.log(`state--------`, state[0]);
+  console.log(`state--------`, state);
   const [value, setValue] = useState(state?.desc || "");
   const [title, setTitle] = useState(state?.title || "");
   const [img, setImg] = useState("");
@@ -25,14 +25,14 @@ const Write = () => {
     try {
       state
         ? await axios.put(
-            `https://gopalblogsapi.herokuapp.com/api/posts/${state[0].id}`,
+            `https://gopalblogsapi.herokuapp.com/api/posts/${state[0]?.id}`,
             {
               title,
               desc: value,
               category,
               img,
-            },
-            { withCredentials: true }
+            }
+            // { withCredentials: true }
           )
         : await axios.post(
             `https://gopalblogsapi.herokuapp.com/api/posts`,
@@ -44,7 +44,11 @@ const Write = () => {
               img,
             },
             {
-              withCredentials: true,
+              headers: {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods":
+                  "GET,PUT,POST,DELETE,PATCH,OPTIONS",
+              },
             }
           );
     } catch (error) {
@@ -57,7 +61,7 @@ const Write = () => {
       <div className="content">
         <input
           type="text"
-          placeholder={state[0].title}
+          placeholder={`title`}
           style={{ width: "99%", margin: "1em 0", height: "2em" }}
           onChange={(e) => setTitle(e.target.value)}
           // value={state.title || title}
@@ -65,7 +69,7 @@ const Write = () => {
         />
         <input
           type="text"
-          placeholder={state[0].img}
+          placeholder={`img`}
           style={{ width: "99%", margin: "0.3em 0", height: "2em" }}
           onChange={(e) => setImg(e.target.value)}
           value={img}
@@ -73,7 +77,7 @@ const Write = () => {
         <div className="editorContainer">
           <ReactQuill
             className="editor"
-            placeholder={state[0].desc}
+            placeholder={`desc`}
             theme="snow"
             value={value}
             onChange={setValue}
