@@ -21,6 +21,8 @@ const Single = () => {
         const res = await axios.get(
           `https://gopalblogsapi.herokuapp.com/api/posts/${postId}`,
           {
+            headers: { "Access-Control-Allow-Origin": "*" },
+            "Content-Type": "application/json",
             withCredentials: true,
           }
         );
