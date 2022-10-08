@@ -29,7 +29,7 @@ const Register = () => {
         {
           headers: { "Access-Control-Allow-Origin": "*" },
           "Content-Type": "application/json",
-          withCredentials: true,
+          // withCredentials: true,
         }
       );
       navigate("/login");
