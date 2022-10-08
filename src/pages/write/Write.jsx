@@ -10,7 +10,7 @@ const Write = () => {
   const state = useLocation().state;
 
   console.log(useLocation());
-  console.log(`state--------`, state[0]);
+  // console.log(`state--------`, state[0]);
   const [value, setValue] = useState(state?.desc || "");
   const [title, setTitle] = useState(state?.title || "");
   const [img, setImg] = useState("");

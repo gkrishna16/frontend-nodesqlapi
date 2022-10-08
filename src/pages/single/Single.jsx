@@ -62,7 +62,6 @@ const Single = () => {
           <div className="single-page" key={p.id}>
             <div className="sidebar-left"></div>
             <div className="article-mid">
-              {/* <h1>MID</h1> */}
               <div className="writer-info flex">
                 <div className="leftside-info flex">
                   <div className="writer-img">
@@ -73,7 +72,6 @@ const Single = () => {
                     <div className="date-time">
                       Posted {moment(post.date).fromNow()}
                     </div>
-                    {/* {currentUser.username === post.username} */}
                   </div>
                 </div>
                 <div className="rightside-info">
