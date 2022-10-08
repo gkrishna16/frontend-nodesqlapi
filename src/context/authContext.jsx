@@ -9,8 +9,9 @@ export const AuthContextProvider = ({ children }) => {
 
   const login = async (inputs) => {
     const res = await axios.post(
-      `https://gopalblogsapi.herokuapp.com/api/auth/login`,
+      `http://localhost:5001/api/auth/login`,
       inputs,
+      { headers: { "Access-Control-Allow-Origin": "*" } },
       {
         withCredentials: true,
       }
@@ -20,7 +21,7 @@ export const AuthContextProvider = ({ children }) => {
   };
 
   const logout = async (inputs) => {
-    const res = await axios.post(`https://gopalblogsapi.herokuapp.com/api/auth/logout`);
+    const res = await axios.post(`http://localhost:5001/api/auth/logout`);
     setCurrentUser(null);
   };
 

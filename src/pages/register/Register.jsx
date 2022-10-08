@@ -25,7 +25,8 @@ const Register = () => {
     try {
       const res = await axios.post(
         `https://gopalblogsapi.herokuapp.com/api/auth/register`,
-        inputs
+        inputs,
+        { headers: { "Access-Control-Allow-Origin": "*" } }
       );
       navigate("/login");
       console.log(res);

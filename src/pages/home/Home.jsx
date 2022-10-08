@@ -40,7 +40,9 @@ const Home = () => {
   useEffect(() => {
     async function fetchData() {
       try {
-        const res = await axios.get(`https://gopalblogsapi.herokuapp.com/api/posts${cat}`);
+        const res = await axios.get(
+          `https://gopalblogsapi.herokuapp.com/api/posts${cat}`
+        );
         console.log(`cat cat`, res.data);
         setPosts(res.data);
       } catch (error) {
@@ -50,7 +52,6 @@ const Home = () => {
     fetchData();
   }, [cat]);
 
-
   return (
     <div className="homepage">
       <div>
@@ -59,7 +60,7 @@ const Home = () => {
       </div>
       <div className="posts">
         {posts &&
-          posts.map((post) => (
+          posts?.map((post) => (
             <Link to={`/post/${post.id}`}>
               <div className="post-box" key={post.id}>
                 <img src={post.img} alt="" />
