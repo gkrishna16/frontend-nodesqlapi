@@ -14,6 +14,7 @@ export const AuthContextProvider = ({ children }) => {
       {
         headers: {
           "Access-Control-Allow-Origin": "*",
+          withCredentials: true,
         },
       }
     );
