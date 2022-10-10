@@ -12,6 +12,9 @@ export const AuthContextProvider = ({ children }) => {
       `https://gopalblogsapi.herokuapp.com/api/auth/login`,
       inputs,
       {
+        headers: {
+          "Content-Type": "application/json",
+        },
         withCredentials: true,
       }
     );
