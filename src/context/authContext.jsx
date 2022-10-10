@@ -12,10 +12,7 @@ export const AuthContextProvider = ({ children }) => {
       `https://gopalblogsapi.herokuapp.com/api/auth/login`,
       inputs,
       {
-        headers: {
-          "Access-Control-Allow-Origin": "*",
-          withCredentials: true,
-        },
+        withCredentials: true,
       }
     );
     console.log(res.data);
