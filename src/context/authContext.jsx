@@ -8,7 +8,15 @@ export const AuthContextProvider = ({ children }) => {
   );
 
   const login = async (inputs) => {
-    const res = await axios.post(`/api/auth/login`, inputs);
+    const res = await axios.post(
+      `https://gopalblogsapi.herokuapp.com/api/auth/login`,
+      inputs,
+      {
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+        },
+      }
+    );
     console.log(res.data);
     setCurrentUser(res.data);
   };
