@@ -11,7 +11,13 @@ export const AuthContextProvider = ({ children }) => {
     const res = await axios.post(
       `https://gopalblogsapi.herokuapp.com/api/auth/login`,
       inputs,
-      { withCredentials: true }
+      {
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "x-www-form-urlencoded",
+        },
+        withCredentials: true,
+      }
     );
 
     console.log(res.data);
