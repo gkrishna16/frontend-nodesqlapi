@@ -17,8 +17,8 @@ export const AuthContextProvider = ({ children }) => {
           "Access-Control-Allow-Origin": [
             "https://frontend-nodesqlapi-67zz57q6i-gkrishna16.vercel.app",
           ],
+          "Access-Control-Allow-Credentials": true,
         },
-        withCredentials: true,
       }
     );
 
