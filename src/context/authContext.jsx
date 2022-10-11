@@ -15,17 +15,11 @@ export const AuthContextProvider = ({ children }) => {
         headers: {
           "Content-Type": "application/json",
           "Access-Control-Allow-Origin": [
-            "https://frontend-nodesqlapi.vercel.app/login",
+            "https://frontend-nodesqlapi-67zz57q6i-gkrishna16.vercel.app",
           ],
         },
         withCredentials: true,
       }
-      // {
-      //   headers: {
-      //     "Content-Type": "application/json",
-      //   },
-      //   withCredentials: true,
-      // }
     );
 
     console.log(res.data);
