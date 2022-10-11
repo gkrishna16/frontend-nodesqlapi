@@ -13,6 +13,8 @@ export const AuthContextProvider = ({ children }) => {
       inputs,
       {
         headers: {
+          "Access-Control-Allow-Origin":
+            "https://63451b78304cc67e24371f3c--reliable-douhua-4b00be.netlify.app/",
           Accept: "application/json",
           "Content-Type": "x-www-form-urlencoded",
         },
