@@ -14,7 +14,9 @@ export const AuthContextProvider = ({ children }) => {
       {
         headers: {
           "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": ["http://localhost:3000"],
+          "Access-Control-Allow-Origin": [
+            "https://frontend-nodesqlapi.vercel.app/login",
+          ],
         },
         withCredentials: true,
       }
