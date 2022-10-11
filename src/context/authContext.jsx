@@ -14,9 +14,16 @@ export const AuthContextProvider = ({ children }) => {
       {
         headers: {
           "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": ["http://localhost:3000"],
         },
         withCredentials: true,
       }
+      // {
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //   },
+      //   withCredentials: true,
+      // }
     );
 
     console.log(res.data);
