@@ -54,6 +54,7 @@ const Home = () => {
 
   return (
     <div className="homepage">
+      <div className="">Home Page</div>
       <div>
         <div className="top-container"></div>
         {/* <h1>Homepage.</h1> */}
