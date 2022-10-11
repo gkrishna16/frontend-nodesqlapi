@@ -10,16 +10,7 @@ export const AuthContextProvider = ({ children }) => {
   const login = async (inputs) => {
     const res = await axios.post(
       `https://gopalblogsapi.herokuapp.com/api/auth/login`,
-      inputs,
-      {
-        headers: {
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": [
-            "https://frontend-nodesqlapi-67zz57q6i-gkrishna16.vercel.app",
-          ],
-          "Access-Control-Allow-Credentials": true,
-        },
-      }
+      inputs
     );
 
     console.log(res.data);
