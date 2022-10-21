@@ -1,0 +1,68 @@
+.homeContainer {
+  background-color: black;
+  color: white;
+}
+
+.heroImg {
+  height: 60vh;
+  position: relative;
+  padding: 0 6em;
+  margin: 0 0 2em 0;
+}
+
+.heroImg img {
+  background-color: black;
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+  /* border: 0.3px solid wheat; */
+}
+
+.textContainer {
+  position: absolute;
+  bottom: 1em;
+  z-index: 1;
+  padding: 1em;
+}
+
+.articlesCol {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2em;
+  padding: 0 6em;
+}
+.card {
+  height: 40vh;
+  border: 0.1px solid wheat;
+}
+
+.cardTitle {
+  padding: 1em;
+}
+.card img {
+  width: 100%;
+  height: 65%;
+  object-fit: cover;
+}
+
+.textImg {
+  max-width: 60vw;
+  font-size: 1.8em;
+}
+
+@media only screen and (max-width: 600px) {
+  .articlesCol {
+    padding: 0 1em;
+  }
+
+  .heroImg {
+    padding: 0 1em;
+  }
+
+  .articlesCol {
+    grid-template-columns: 1fr;
+  }
+  .homeContainer {
+    background-color: black;
+  }
+}

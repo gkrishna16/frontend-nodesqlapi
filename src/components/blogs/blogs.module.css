@@ -1,0 +1,42 @@
+.articleGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1em;
+  padding: 1em 4em;
+  background-color: black;
+  transition: all 1s ease-in-out;
+  grid-auto-rows: 350px;
+}
+
+.card {
+  /* background-color: white; */
+  transition: all 1s ease-in-out;
+  color: white;
+  background-color: black;
+  border: 0.3px solid wheat;
+}
+.card img {
+  height: 70%;
+  width: 100%;
+  object-fit: cover;
+  background-color: white;
+  transition: all 1s ease-in-out;
+}
+
+.title {
+  padding: 0 5px;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.desc {
+  font-size: 1em;
+  padding: 0 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  .articleGrid {
+    /* display: grid; */
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,12 +1,5 @@
 import "./App.css";
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-  createBrowserRouter,
-  Outlet,
-  RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
 import Home from "./pages/home/Home";
@@ -14,6 +7,7 @@ import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import Single from "./pages/single/Single";
 import Write from "./pages/write/Write";
+import Blogs from "./components/blogs/Blogs";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +26,10 @@ const router = createBrowserRouter([
         path: "/write",
         element: <Write />,
       },
+      {
+        path: "/blogs",
+        element: <Blogs />,
+      },
     ],
   },
   {
@@ -46,7 +44,7 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <RouterProvider router={router} />
     </div>
   );

@@ -18,14 +18,11 @@ const Single = () => {
   useEffect(() => {
     async function fetchData() {
       try {
-        const res = await axios.get(
-          `https://gopalblogsapi.herokuapp.com/api/posts/${postId}`,
-          {
-            // headers: { "Access-Control-Allow-Origin": "*" },
-            // "Content-Type": "application/json",
-            withCredentials: true,
-          }
-        );
+        const res = await axios.get(`/api/posts/${postId}`, {
+          // headers: { "Access-Control-Allow-Origin": "*" },
+          // "Content-Type": "application/json",
+          withCredentials: true,
+        });
         await setPost(res.data);
         console.log(`single post -------`, post);
       } catch (error) {
@@ -43,10 +40,9 @@ const Single = () => {
 
   async function handleDelete() {
     try {
-      const res = await axios.delete(
-        `https://gopalblogsapi.herokuapp.com/api/posts/${postId}`,
-        { withCredentials: true }
-      );
+      const res = await axios.delete(`/api/posts/${postId}`, {
+        withCredentials: true,
+      });
       navigate("/");
     } catch (error) {
       console.log(error);

@@ -1,0 +1,25 @@
+.footer {
+  padding: 0 5rem;
+  height: 15rem;
+  background-color: black;
+  color: wheat;
+  padding: 2em 8em;
+}
+
+.footerContent {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+}
+.links p {
+  /* display: grid; */
+  font-size: 13px;
+  margin: 2px 0;
+  color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  .footerContent {
+    justify-content: space-around;
+  }
+}

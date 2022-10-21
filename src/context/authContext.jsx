@@ -8,28 +8,14 @@ export const AuthContextProvider = ({ children }) => {
   );
 
   const login = async (inputs) => {
-    const res = await axios.post(
-      `https://gopalblogsapi.herokuapp.com/api/auth/login`,
-      inputs,
-      {
-        headers: {
-          "Access-Control-Allow-Origin": "*",
-          Accept: "application/json",
-          "access-control-allow-headers": "Content-Type",
-          "access-control-expose-headers": "*",
-          "content-type": "application/json; charset=utf-8",
-        },
-      }
-    );
+    const res = await axios.post(`/api/auth/login`, inputs);
 
     console.log(res.data);
     setCurrentUser(res.data);
   };
 
   const logout = async (inputs) => {
-    const res = await axios.post(
-      `https://gopalblogsapi.herokuapp.com/api/auth/logout`
-    );
+    const res = await axios.post(`api/auth/logout`);
     setCurrentUser(null);
   };
 

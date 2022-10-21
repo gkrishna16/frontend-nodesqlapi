@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./write.css";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 import moment from "moment";
 
@@ -15,7 +15,9 @@ const Write = () => {
   const [title, setTitle] = useState(state?.title || "");
   const [img, setImg] = useState("");
   const [category, setCategory] = useState(state?.category || "");
-  const [file, setFile] = useState("");
+  // const [file, setFile] = useState("");
+
+  const navigate = useNavigate();
 
   console.log(`value, category, ------`, value, category);
 
@@ -25,7 +27,7 @@ const Write = () => {
     try {
       state
         ? await axios.put(
-            `https://gopalblogsapi.herokuapp.com/api/posts/${state[0]?.id}`,
+            `/api/posts/${state[0]?.id}`,
             {
               title,
               desc: value,
@@ -35,7 +37,7 @@ const Write = () => {
             // { withCredentials: true }
           )
         : await axios.post(
-            `https://gopalblogsapi.herokuapp.com/api/posts`,
+            `/api/posts`,
             {
               title,
               desc: value,
@@ -51,6 +53,7 @@ const Write = () => {
               },
             }
           );
+      navigate("/");
     } catch (error) {
       console.log(error);
     }

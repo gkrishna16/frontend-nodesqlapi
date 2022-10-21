@@ -1,36 +1,149 @@
-.navbar-page {
-  /* background-color: black; */
-  /* color: white; */
-  display: flex;
+/* .navbar-page { */
+/* background-color: black; */
+/* color: white; */
+/* display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 1em;
   font-size: 1em;
   padding: 0 5em;
-}
+} */
 
-ul li {
+/* ul li {
   list-style: none;
   text-decoration: none;
-}
+} */
 
-a {
-  /* color: white; */
-  text-decoration: none;
-}
+/* a { */
+/* color: white; */
+/* text-decoration: none; */
+/* } */
 
 /* .nav-container > * {
   display: flex;
 } */
 
-.nav-right {
+/* .nav-right {
   display: flex;
   justify-content: space-between;
   gap: 3em;
-}
+} */
 
-@media only screen and (max-width: 700px) {
+/* @media only screen and (max-width: 700px) {
   .navbar-page {
     padding: 0;
   }
+} */
+
+.nav-container {
+  /* height: 5em; */
+  background-color: black;
+  color: white;
+  position: relative;
+  color: rgb(231, 221, 201);
+  z-index: 2;
+}
+
+.nav-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+}
+
+.name-cen {
+  font-size: 3em;
+  font-family: "Abril Fatface", cursive;
+}
+
+.options-ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5em 20em;
+  list-style-type: none;
+  gap: 3em;
+  margin: 0;
+}
+
+.ham-icon {
+  transform: scale(1.5);
+}
+
+.options-ul-ham {
+  align-items: center;
+  list-style-type: none;
+}
+
+.ham-menu {
+  position: absolute;
+  top: 10px;
+  height: 100vh;
+  background-color: black;
+  width: 100%;
+}
+
+.ham-icon {
+  position: absolute;
+  left: 1em;
+  top: 2.3em;
+  z-index: 2;
+}
+
+.disappear {
+  display: none;
+}
+
+.options-ul-ham {
+  display: grid;
+  gap: 5em;
+  margin: 10em 0 0 0;
+}
+
+.padding4 {
+  padding: 4em;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(231, 221, 201);
+}
+
+@media only screen and (max-width: 600px) {
+  .social-nav {
+    opacity: 0;
+  }
+  .options-ul {
+    display: none;
+  }
+  .nav-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .ham-menu {
+    display: none;
+  }
+  .ham-icon {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .nav-top {
+    display: flex;
+    flex-direction: column;
+  }
+ 
+}
+
+.social {
+  display: flex;
+  gap: 0.8em;
+}
+
+.social .icon {
+  scale: 1.4;
 }

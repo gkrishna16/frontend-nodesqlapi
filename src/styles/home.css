@@ -1,0 +1,125 @@
+/* .homepage {
+  padding: 0 5em;
+}
+.top-container {
+  height: 40vh;
+  border: 1px solid black;
+  background-image: url("https://images.unsplash.com/photo-1593428521026-d5f50d6bb6f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1559&q=80");
+  object-fit: contain;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0 5em;
+}
+.posts {
+  display: grid;
+  gap: 2em;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin: 1em 0;
+}
+.post-box {
+  border: 1px solid black;
+  height: 400px;
+  box-shadow: 4px 10px;
+}
+
+.post-box img {
+  width: 100%;
+  object-fit: cover;
+  height: 80%;
+}
+
+@media only screen and (max-width: 700px) {
+  .homepage {
+    padding: 0;
+  }
+} */
+
+:root {
+}
+
+.home-container {
+  background-color: black;
+  /* height: 100vh; */
+  color: white;
+}
+
+.hero-img {
+  position: relative;
+  background-color: black;
+}
+
+.hero-img img {
+  width: 100%;
+  object-fit: cover;
+  height: 500px;
+}
+
+.text-part {
+  position: absolute;
+  bottom: 0em;
+}
+
+.text-container {
+  padding: 1em;
+}
+
+.text-container p {
+  font-size: 2.5em;
+  font-family: "Secular One", sans-serif;
+  /* padding-right: 4em; */
+  /* margin: 0; */
+}
+.text-container button {
+  background-color: rgb(96, 191, 228);
+  border: none;
+  width: 5rem;
+  height: 2em;
+}
+
+.article-grid {
+  background-color: black;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2em;
+  padding: 4em 8em;
+}
+
+.article-grid > * {
+  border: 1px solid wheat;
+  height: 400px;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.articles-col card {
+  /* width: 100%; */
+  display: grid;
+  grid-template-columns: minmax(auto-fit, repeat(400px, 1fr));
+}
+
+@media only screen and (min-width: 500px) {
+  .hero {
+    padding: 0 1em;
+  }
+  .article-grid {
+    padding: 2em 1em;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .hero {
+    padding: 0 8em;
+  }
+  .article-grid {
+    padding: 2em 8em;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .article-grid {
+    padding: 2em 1em;
+  }
+}

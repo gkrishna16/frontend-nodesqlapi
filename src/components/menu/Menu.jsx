@@ -8,9 +8,7 @@ const Menu = ({ cat }) => {
   useEffect(() => {
     async function fetchData() {
       try {
-        const res = await axios.get(
-          `https://gopalblogsapi.herokuapp.com/api/posts/?cat=${cat}`
-        );
+        const res = await axios.get(`/api/posts/?cat=${cat}`);
         setPosts(res.data);
       } catch (error) {
         console.log(error);

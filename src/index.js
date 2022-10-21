@@ -4,6 +4,9 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { AuthContextProvider } from "./context/authContext";
+    // "start": "react-scripts --openssl-legacy-provider start",
+
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

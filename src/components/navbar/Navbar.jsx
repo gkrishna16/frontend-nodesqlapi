@@ -1,51 +1,154 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../context/authContext";
 import "./Nav.css";
+import Menu from "@mui/icons-material/Menu";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import FacebookIcon from "@mui/icons-material/Facebook";
 
 const Navbar = () => {
   const { currentUser, logout } = useContext(AuthContext);
   console.log(currentUser);
 
+  const [showNav, setShowNav] = useState(false);
+
   return (
-    <div className="navbar-page">
-      <div className="left-nav">
-        <h3>NAVBAR</h3>
+    <div className="nav-container">
+      <div className="nav-top">
+        <div className="social-nav">
+          <div className="social">
+            <div className="icon">
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <InstagramIcon />
+              </a>
+            </div>
+            <div className="icon">
+              <GitHubIcon />
+            </div>
+            <div className="icon">
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FacebookIcon />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className="name-cen">CODEDECK</div>
+        <div className="">SEARCH</div>
       </div>
-      <div className="nav-container">
-        <ul className="nav-right">
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/?cat=sql">Sql</Link>
-          </li>
-          <li>
-            <Link to="/?cat=react">React</Link>
-          </li>
-          {currentUser && (
+
+      <div className="bottom">
+        <div className="">
+          <ul className="options-ul">
             <li>
-              <Link to="/Write">Write</Link>
+              <Link to="/">Home</Link>
             </li>
-          )}
-          {!currentUser && (
+            <li>Categories</li>
+            <li>
+              <Link to="/blogs"> Blogs</Link>
+            </li>
+            <li>
+              <Link to="/?cat=sql">Sql</Link>
+            </li>
+
+            <li>
+              <Link to="/?cat=react">React</Link>
+            </li>
+            {/* <li>Style</li> */}
+            {/* <li>
+              <Link to="/about"> About</Link>
+            </li> */}
+            {/* <li>
+              <Link to="/login">Login</Link>
+            </li> */}
+            {currentUser && (
+              <li>
+                <Link to="/Write">Write</Link>
+              </li>
+            )}
+            {!currentUser ? (
+              <li>
+                <Link to="/login">Login</Link>
+              </li>
+            ) : (
+              ""
+            )}
+            {!currentUser ? (
+              <li>
+                <Link to="/register">Register</Link>
+              </li>
+            ) : (
+              ""
+            )}
+            {currentUser && <li>{currentUser?.username}</li>}
+            {currentUser && (
+              <li>
+                <Link onClick={logout}>Logout</Link>
+              </li>
+            )}
+          </ul>
+        </div>
+      </div>
+      <div className={`ham-icon`} onClick={() => setShowNav(!showNav)}>
+        <Menu />
+      </div>
+      <div className={`${showNav ? "" : "disappear"} ham-menu`}>
+        <div className="options-ham">
+          <ul
+            className={`options-ul-ham ${showNav ? "" : "disappear padding4"}`}
+          >
+            {/* <li className={`${showNav ? "" : "disappear"}`}>
+              <ClearIcon onClick={() => setShowNav(!showNav)} />
+            </li> */}
+
+            {/* <li>Categories</li>
+            <li>Blog</li>
+            <li>Style</li> */}
+            {/* <li>
+              <Link to="/about"> About</Link>
+            </li> */}
+
+            {/* <li>
+              <Link to="/about"> About</Link>
+            </li> */}
+
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+
+            <li>
+              <Link to="/blogs"> Blogs</Link>
+            </li>
+            <li>
+              <Link to="/?cat=sql">Sql</Link>
+            </li>
+
+            <li>
+              <Link to="/?cat=react">React</Link>
+            </li>
+
             <li>
               <Link to="/login">Login</Link>
             </li>
-          )}
-          {!currentUser && (
             <li>
               <Link to="/register">Register</Link>
             </li>
-          )}
-          {/* <li>{currentUser?.username}</li> */}
-          {currentUser && <li>{currentUser?.username}</li>}
-          {currentUser && (
-            <li>
-              <Link onClick={logout}>Logout</Link>
-            </li>
-          )}
-        </ul>
+            {currentUser && <li>{currentUser?.username}</li>}
+            {currentUser && (
+              <li>
+                <Link onClick={logout}>Logout</Link>
+              </li>
+            )}
+          </ul>
+        </div>
       </div>
     </div>
   );

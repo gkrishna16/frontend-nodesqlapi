@@ -1,4 +1,3 @@
-import axios from "axios";
 import React, { useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Navbar from "../../components/navbar/Navbar";
@@ -10,7 +9,7 @@ const Login = () => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
-  const { currentUser, login, logout } = useContext(AuthContext);
+  const { currentUser, login } = useContext(AuthContext);
   console.log(currentUser);
 
   function handleChange(e) {
@@ -33,31 +32,45 @@ const Login = () => {
   return (
     <div>
       <Navbar />
-      <div className="">
-        <h1>Login</h1>
+      <div className="form-container">
+        <form>
+          <h1>Login</h1>
+          <label htmlFor="" className="custom-field">
+            <input
+              required
+              type="text"
+              // placeholder="username"
+              name="username"
+              onChange={handleChange}
+              autoComplete="off"
+            />
+            <span className="placeholder">Enter Username </span>
+          </label>
+          <label htmlFor="" className="custom-field">
+            <input
+              required
+              type="password"
+              // placeholder="password"
+              name="password"
+              onChange={handleChange}
+              autoComplete="off"
+            />
+            <span className="placeholder">Enter Password </span>
+          </label>
+
+          {/* <input required type="text" placeholder="password" name="username" /> */}
+          <div className="button-sec">
+            <button onClick={handleSubmit}>Login</button>
+          </div>
+          <div className="error-msg">{error && error}</div>
+          <span>
+            It seems you are not registered.{" "}
+            <Link to="/register" className="regis">
+              Register
+            </Link>
+          </span>
+        </form>
       </div>
-      <form>
-        <input
-          required
-          type="text"
-          placeholder="username"
-          name="username"
-          onChange={handleChange}
-        />
-        <input
-          required
-          type="password"
-          placeholder="password"
-          name="password"
-          onChange={handleChange}
-        />
-        {/* <input required type="text" placeholder="password" name="username" /> */}
-        <button onClick={handleSubmit}>Login</button>
-        <div className="">{error && error}</div>
-        <span>
-          It seems you are not registered. <Link to="/register">Register</Link>
-        </span>
-      </form>
     </div>
   );
 };

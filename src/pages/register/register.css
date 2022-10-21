@@ -1,13 +1,57 @@
-.error-msg {
-  color: rgb(203, 16, 16);
-}
-.form {
+.register-form-container {
+  height: 70vh;
   display: grid;
-  grid-template-columns: 30%;
-  place-content: center;
+  place-items: center;
+  width: 100%;
+  color: black;
 }
 
-.form button {
-  width: 50%;
-  align-self: center;
+.register-form-container form {
+  border: 1px solid black;
+  width: 40%;
+  padding: 1em;
+}
+
+.register-form-container form input {
+  border: 1.5px solid rgb(200, 200, 200);
+  --webkit-appearance: none;
+  --ms-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0.8em;
+  border-radius: 3px;
+  width: 100%;
+  margin: 10px 0;
+  outline: none;
+  color: rgb(0, 0, 0);
+}
+
+.form-element {
+  position: relative;
+}
+.form-element .placeholder {
+  position: absolute;
+  top: 0px;
+  left: 10px;
+  transition: top 0.3s ease;
+}
+
+.form-element input:valid + .placeholder,
+.form-element input:focus + .placeholder {
+  background: #fff;
+  top: -22px;
+  padding: 4px;
+  border-color: black;
+}
+
+button {
+  font-family: inherit;
+}
+
+.register-form-container form input:focus {
+  border-color: black;
+}
+
+.logi {
+  color: rgb(106, 106, 106);
 }

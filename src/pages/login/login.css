@@ -1,0 +1,71 @@
+.form-container {
+  height: 70vh;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  color: black;
+}
+
+.form-container form {
+  width: 40%;
+  padding: 1em;
+  border: 1px solid black;
+}
+
+.form-container form input {
+  border: 1.5px solid rgb(200, 200, 200);
+  --webkit-appearance: none;
+  --ms-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0.8em;
+  border-radius: 3px;
+  width: 100%;
+  margin: 10px 0;
+  outline: none;
+  color: rgb(0, 0, 0);
+  /* background-color: rgb(244, 243, 243); */
+}
+
+.custom-field {
+  position: relative;
+  font-size: 12px;
+  padding-top: 20px;
+  margin-bottom: 5px;
+}
+
+.custom-field .placeholder {
+  position: absolute;
+  left: 18px;
+  top: calc(50% + 16px);
+  transform: translateY(-90%);
+  transition: top 0.3s ease;
+  font-size: 15px;
+}
+
+.custom-field input:valid + .placeholder,
+.custom-field input:focus + .placeholder {
+  top: 20px;
+  /* font-size: 12px; */
+  color: #222;
+  background: #fff;
+  padding: 6px;
+}
+
+.form-container form input:focus {
+  border-color: rgb(0, 0, 0);
+}
+button {
+  padding: 10px;
+  width: 100px;
+  margin-top: 0.3em;
+}
+
+.error-msg {
+  color: rgb(111, 10, 10);
+  margin-top: 1em;
+}
+
+.regis {
+  color: rgb(106, 106, 106);
+}
