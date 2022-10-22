@@ -1,8 +1,14 @@
+.singlepageContainer {
+  color: black;
+  padding: 1em;
+}
+
 .single-page {
   display: grid;
   grid-template-columns: 15% 60% auto;
   gap: 2em;
   /* width: 100%; */
+  color: black;
 }
 .sidebar-left,
 .article-mid,
@@ -40,4 +46,11 @@
 .article {
   text-align: justify;
   line-height: 30px;
+}
+
+@media screen and (max-width: 600px) {
+  .single-page {
+    display: flex;
+    flex-direction: column;
+  }
 }

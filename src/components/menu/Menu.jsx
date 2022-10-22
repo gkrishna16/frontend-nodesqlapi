@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import "./Menu.css";
+import { Link } from "react-router-dom";
+import menu from "./Menu.module.css";
 
 const Menu = ({ cat }) => {
   const [posts, setPosts] = useState("");
@@ -20,14 +21,15 @@ const Menu = ({ cat }) => {
   console.log(posts);
 
   return (
-    <div>
+    <div className={menu.menuContainer}>
       {posts &&
         posts.map((d) => (
-          <div className="" key={d.id}>
-            <div className="">
-              <h1>New</h1>
-            </div>
-            <div className="">{d.title}</div>
+          <div className={menu.menuBox} key={d.id}>
+            <Link to={`/post/${d.id}`}>
+              <div className="">{/* <h1>New</h1> */}</div>
+              <div className={menu.menuTitle}>{d.title}</div>
+              <div className="desc">{d.desc.substring(0, 20)}</div>
+            </Link>
           </div>
         ))}
     </div>

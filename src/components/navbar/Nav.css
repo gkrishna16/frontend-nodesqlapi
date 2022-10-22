@@ -109,6 +109,14 @@ a {
   color: rgb(231, 221, 201);
 }
 
+.icon {
+  scale: 2;
+}
+
+.icon:hover {
+  scale: 1.5;
+}
+
 @media only screen and (max-width: 600px) {
   .social-nav {
     opacity: 0;
@@ -136,7 +144,6 @@ a {
     display: flex;
     flex-direction: column;
   }
- 
 }
 
 .social {

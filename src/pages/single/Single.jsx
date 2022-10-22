@@ -50,8 +50,8 @@ const Single = () => {
   }
 
   return (
-    <div className="">
-      <div>left</div>
+    <div className="singlepageContainer">
+      {/* <div>left</div> */}
       {post?.map((p) => {
         const { title, desc } = p;
         return (
@@ -89,62 +89,6 @@ const Single = () => {
                   <h2>Top 25 Sql questions.</h2>
 
                   {convertHtmlToString(desc)}
-                  {/* {desc} */}
-                  {/* <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Obcaecati incidunt quia, officiis nam vel rem minus dicta
-                    fuga fugiat explicabo quam tempore quae aperiam.
-                    Exercitationem vel expedita eum ut quia! Lorem ipsum dolor
-                    sit amet consectetur, adipisicing elit. Adipisci quos
-                    consequuntur, esse, alias aliquid quam tempora corporis
-                    fugit aspernatur quod sunt accusamus cupiditate quibusdam
-                    enim aut cumque. Praesentium, consectetur voluptatum!
-                  </p>
-
-                  <h3>Next important section </h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Saepe quis reprehenderit enim, aspernatur beatae repudiandae
-                    amet ut similique facere, vitae magnam? Blanditiis, enim
-                    laborum? Consequuntur aut quasi repudiandae! Eligendi,
-                    similique! Lorem ipsum dolor, sit amet consectetur
-                    adipisicing elit. Voluptatum, ducimus! Enim deserunt dolor
-                    dignissimos, laudantium cumque amet at eum accusamus id!
-                    Quidem tenetur doloremque eligendi optio. Libero beatae
-                    numquam magni?Illum a, delectus modi dicta consequuntur
-                    possimus, illo reprehenderit veniam excepturi at facilis
-                    dolorem enim repellendus consectetur eum accusamus!
-                    Repudiandae, obcaecati pariatur.
-                  </p>
-                  <h3>Next important section </h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Saepe quis reprehenderit enim, aspernatur beatae repudiandae
-                    amet ut similique facere, vitae magnam? Blanditiis, enim
-                    laborum? Consequuntur aut quasi repudiandae! Eligendi,
-                    similique! Lorem ipsum dolor, sit amet consectetur
-                    adipisicing elit. Voluptatum, ducimus! Enim deserunt dolor
-                    dignissimos, laudantium cumque amet at eum accusamus id!
-                    Quidem tenetur doloremque eligendi optio. Libero beatae
-                    numquam magni? Lorem ipsum, dolor sit amet consectetur
-                    adipisicing elit. Omnis hic dolorem nostrum doloribus atque,
-                    dignissimos adipisci incidunt iure delectus consectetur
-                    magnam reiciendis, nisi quam inventore maiores repellendus
-                    dolores saepe qui! Sapiente alias dolore, corrupti eum ad
-                    temporibus esse pariatur minus voluptate expedita
-                    reprehenderit quis voluptates neque nobis sequi autem nihil
-                    qui totam tenetur officia quibusdam aut! Error dolores
-                    reprehenderit rem. Lorem ipsum dolor sit amet, consectetur
-                    adipisicing elit. Id quod, hic molestias fugiat non quis,
-                    eum, impedit assumenda quisquam eius doloremque delectus
-                    illo. Corporis dolorem eos, quaerat reprehenderit ad
-                    praesentium! Omnis expedita, distinctio vitae nihil soluta
-                    perferendis deleniti et impedit debitis vero quam natus in
-                    modi minima ipsam! Nesciunt, voluptatem. Necessitatibus,
-                    provident! Corrupti perspiciatis ex aut inventore rerum
-                    molestiae ad? Quasi quis ullam aliquid libero, veniam minima
-                    quo.
-                  </p> */}
                 </div>
               </div>
             </div>

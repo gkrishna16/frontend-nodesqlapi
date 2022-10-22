@@ -90,12 +90,12 @@ const Write = () => {
       <div className="menu">
         <div className="item">
           <h1>Publish</h1>
-          <span>
+          {/* <span>
             <b>Status : </b> Draft
           </span>
           <span>
             <b>Visible : </b> Draft
-          </span>
+          </span> */}
           <div className="">
             {/* <input
               style={{

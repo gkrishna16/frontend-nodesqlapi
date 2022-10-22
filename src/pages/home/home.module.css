@@ -37,7 +37,7 @@
 }
 
 .cardTitle {
-  padding: 1em;
+  padding: 1em 1em;
 }
 .card img {
   width: 100%;
@@ -50,6 +50,11 @@
   font-size: 1.8em;
 }
 
+.card:hover {
+  /* scale: 1.09; */
+  border: 8px solid wheat;
+  transition: all 0.3s ease-in-out;
+}
 @media only screen and (max-width: 600px) {
   .articlesCol {
     padding: 0 1em;

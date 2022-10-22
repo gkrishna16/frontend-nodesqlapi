@@ -3,6 +3,7 @@
   display: flex;
   justify-content: space-between;
   gap: 2em;
+  color: black;
 }
 .content .editorContainer {
   height: 75vh;

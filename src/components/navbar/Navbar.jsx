@@ -12,6 +12,7 @@ const Navbar = () => {
   console.log(currentUser);
 
   const [showNav, setShowNav] = useState(false);
+  const [open, setOpen] = useState(false);
 
   return (
     <div className="nav-container">
@@ -51,7 +52,16 @@ const Navbar = () => {
             <li>
               <Link to="/">Home</Link>
             </li>
-            <li>Categories</li>
+            {/* <li> */}
+              {/* Categories */}
+              {/* {open ? (
+                <ul className="dropdownIn">
+                  <li>React</li>
+                  <li>Sql</li>
+                </ul>
+              ) : null} */}
+            {/* </li> */}
+
             <li>
               <Link to="/blogs"> Blogs</Link>
             </li>
@@ -66,9 +76,7 @@ const Navbar = () => {
             {/* <li>
               <Link to="/about"> About</Link>
             </li> */}
-            {/* <li>
-              <Link to="/login">Login</Link>
-            </li> */}
+
             {currentUser && (
               <li>
                 <Link to="/Write">Write</Link>
